@@ -1,15 +1,13 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import config from "config";
 import socket from "./src/socket";
-const corsOrigin = config.get<string>("corsOrigin");
 const app = express();
 const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
 	cors: {
-		origin: corsOrigin,
+		origin: "http://localhost:3000",
 		credentials: true,
 	},
 });
