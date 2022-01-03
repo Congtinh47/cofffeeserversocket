@@ -14,13 +14,10 @@ const io = new Server(httpServer, {
 	},
 });
 
-app.get("/", (_, res: any) => {
+app.get("/", (_: any, res: any) => {
 	res.send(`it working`);
 });
 const PORT = process.env.PORT || 4000;
 httpServer.listen(PORT, () => {
-	console.log(PORT);
-	// logger.info(`🚀 Server version ${version} is listening 🚀`);
-	// logger.info(`http://${host}:${port}`);
 	socket({ io });
 });
