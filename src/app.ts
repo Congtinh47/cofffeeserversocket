@@ -14,11 +14,9 @@ const io = new Server(httpServer, {
 	},
 });
 
-app.get(
-	"/",
-	(_, res) => {}
-	// res.send(`Server is up and running version ${version}`)
-);
+app.get("/", (_, res: any) => {
+	res.send(`it working`);
+});
 const PORT = process.env.PORT || 4000;
 httpServer.listen(PORT, () => {
 	console.log(PORT);
