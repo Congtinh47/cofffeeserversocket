@@ -1,12 +1,12 @@
 {
 	"name": "server",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "index.ts",
 	"author": "Tom Nagle",
 	"license": "MIT",
 	"scripts": {
-		"dev": "nodemon --config nodemon.json src/app.ts",
-		"start": "ts-node src/app.ts"
+		"dev": "nodemon --config nodemon.json index.ts",
+		"start": "ts-node index.ts"
 	},
 	"devDependencies": {
 		"@types/config": "^0.0.38",

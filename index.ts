@@ -2,7 +2,7 @@ import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import config from "config";
-import socket from "./socket";
+import socket from "./src/socket";
 const corsOrigin = config.get<string>("corsOrigin");
 const app = express();
 const httpServer = createServer(app);
