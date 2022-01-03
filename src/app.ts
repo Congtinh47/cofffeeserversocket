@@ -21,6 +21,7 @@ app.get(
 );
 const PORT = process.env.PORT || 4000;
 httpServer.listen(PORT, () => {
+	console.log(PORT);
 	// logger.info(`🚀 Server version ${version} is listening 🚀`);
 	// logger.info(`http://${host}:${port}`);
 	socket({ io });
